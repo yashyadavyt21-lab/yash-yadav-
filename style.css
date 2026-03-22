@@ -1,43 +1,72 @@
+/* Global Styles & Typography */
 :root {
-    --primary-color: #2d3436;
-    --accent-color: #6c5ce7;
-    --light-bg: #f9f9f9;
+    --dark-blue: #1a365d;
+    --soft-grey: #f4f7f6;
     --white: #ffffff;
+    --text-dark: #2d3748;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--light-bg);
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif; /* Requirement: Inter Font */
+    background-color: var(--soft-grey); /* Requirement: Soft Grey Bg */
+    color: var(--text-dark);
+    line-height: 1.8; /* Requirement: Adjusted line-height */
+    letter-spacing: 0.5px;
 }
 
+/* Navigation: Fixed & Flexbox */
 .navbar {
+    position: fixed; /* Requirement: Fixed Navigation */
+    top: 0;
+    width: 100%;
+    background-color: var(--dark-blue);
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 5%;
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
 }
 
-.hero-section {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.nav-links li {
+    display: inline-block; /* Requirement: inline-block */
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Header: Flexbox Requirement */
+.header-flex {
+    display: flex; /* Requirement: display: flex */
+    justify-content: space-between; /* Requirement: space-between */
     align-items: center;
+    background-color: var(--dark-blue); /* Requirement: Dark Blue */
     color: white;
+    padding: 120px 10% 60px 10%;
+    text-align: left;
 }
 
+/* Content & Cards */
 .container {
     max-width: 800px;
     margin: 40px auto;
@@ -45,14 +74,30 @@ body {
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background: var(--white);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px; /* Requirement: border-radius */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05); /* Requirement: box-shadow */
 }
 
+h2 {
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--soft-grey);
+}
+
+.skill-tag {
+    background: var(--dark-blue);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+/* ID Selector Requirement */
 #main-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -1px;
 }
