@@ -4,8 +4,8 @@
     --soft-grey: #f4f7f6;
     --white: #ffffff;
     --accent-blue: #ebf8ff;
-    --exp-tint: #e6fffa;
-    --strength-tint: #faf5ff; /* New: Soft purple tint for Strengths */
+    --philosophy-bg: #1a365d; /* Dark background for the focus shift section */
+    --gold: #d69e2e;
 }
 
 * {
@@ -84,15 +84,34 @@ body {
     border-top: 5px solid var(--dark-blue);
 }
 
+/* Philosophy/Improvements Section */
+.section-philosophy {
+    background-color: var(--philosophy-bg);
+    color: white;
+    border-top: 5px solid var(--gold);
+}
+
+.section-philosophy .section-title {
+    color: var(--gold);
+}
+
+.highlight-text {
+    margin-top: 10px;
+    color: #cbd5e0;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 15px;
+}
+
 /* Strengths Section Tint */
 .section-strengths {
-    background-color: var(--strength-tint);
-    border-left: 4px solid #805ad5; /* Purple accent */
+    background-color: #faf5ff;
+    border-left: 4px solid #805ad5;
 }
 
 /* Experience Section Tint */
 .section-exp {
-    background-color: var(--exp-tint);
+    background-color: #e6fffa;
     border-left: 4px solid #38b2ac;
 }
 
@@ -100,12 +119,6 @@ body {
 .section-edu {
     background-color: #f0f4f8;
     border-left: 4px solid var(--dark-blue);
-}
-
-/* Skills Section Tint */
-.section-skills {
-    background-color: #fffaf0;
-    border-left: 4px solid #d69e2e;
 }
 
 .intro-card {
@@ -121,15 +134,6 @@ body {
     letter-spacing: 1px;
 }
 
-.strength-item {
-    margin-bottom: 20px;
-}
-
-.strength-item h3 {
-    font-size: 1rem;
-    color: #4a5568;
-}
-
 .skill-tag {
     background: var(--dark-blue);
     color: white;
@@ -141,7 +145,7 @@ body {
 }
 
 .strength-tag {
-    background: #6b46c1; /* Specific purple for marketing tags */
+    background: #6b46c1;
 }
 
 .profile-circle {
