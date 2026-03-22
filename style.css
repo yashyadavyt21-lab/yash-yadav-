@@ -1,9 +1,9 @@
-/* Global Styles & Typography */
+/* 1. Typography & Readability */
 :root {
-    --dark-blue: #1a365d;
-    --soft-grey: #f4f7f6;
+    --dark-blue: #1a365d;   /* Requirement: #1a365d */
+    --soft-grey: #f4f7f6;    /* Requirement: #f4f7f6 */
     --white: #ffffff;
-    --text-dark: #2d3748;
+    --text-color: #2d3748;
 }
 
 * {
@@ -13,16 +13,16 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Requirement: Inter Font */
-    background-color: var(--soft-grey); /* Requirement: Soft Grey Bg */
-    color: var(--text-dark);
-    line-height: 1.8; /* Requirement: Adjusted line-height */
-    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif; /* Requirement: 'Inter' Font */
+    background-color: var(--soft-grey);
+    color: var(--text-color);
+    line-height: 1.8; /* Requirement: Improved line-height */
+    letter-spacing: 0.5px; /* Requirement: Improved spacing */
 }
 
-/* Navigation: Fixed & Flexbox */
+/* 2. Navigation Bar: Fixed & Flexbox */
 .navbar {
-    position: fixed; /* Requirement: Fixed Navigation */
+    position: fixed; /* Requirement: Fixed bar */
     top: 0;
     width: 100%;
     background-color: var(--dark-blue);
@@ -31,9 +31,8 @@ body {
 }
 
 .nav-container {
-    display: flex;
+    display: flex; /* Requirement: Flexbox */
     justify-content: space-between;
-    align-items: center;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
@@ -55,49 +54,82 @@ body {
     font-weight: 600;
 }
 
-/* Header: Flexbox Requirement */
+/* 3. Header: Flexbox & Positioning */
 .header-flex {
     display: flex; /* Requirement: display: flex */
-    justify-content: space-between; /* Requirement: space-between */
+    justify-content: space-between; /* Requirement: justify-content: space-between */
     align-items: center;
-    background-color: var(--dark-blue); /* Requirement: Dark Blue */
+    background-color: var(--dark-blue);
     color: white;
-    padding: 120px 10% 60px 10%;
-    text-align: left;
+    padding: 140px 10% 80px 10%;
 }
 
-/* Content & Cards */
+/* 4. Selectors: ID & Classes */
+#main-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.intro-card {
+    text-align: center; /* Requirement: Introduction in the middle */
+    font-size: 1.1rem;
+    border-left: 5px solid var(--dark-blue);
+}
+
 .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 900px;
+    margin: -40px auto 40px auto; /* Pulls first card slightly over header */
+    padding: 0 20px;
+    position: relative;
 }
 
 .card {
     background: var(--white);
-    padding: 30px;
+    padding: 35px;
     margin-bottom: 30px;
-    border-radius: 12px; /* Requirement: border-radius */
-    box-shadow: 0 10px 15px rgba(0,0,0,0.05); /* Requirement: box-shadow */
+    border-radius: 15px; /* Requirement: border-radius */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Requirement: box-shadow */
 }
 
 h2 {
-    color: var(--dark-blue);
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--soft-grey);
+    color: var(--dark-blue); /* Requirement: Professional dark blue */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #edf2f7;
+    margin: 20px 0;
 }
 
 .skill-tag {
     background: var(--dark-blue);
     color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    margin-right: 5px;
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    margin: 5px;
+    display: inline-block;
 }
 
-/* ID Selector Requirement */
-#main-title {
-    font-size: 3rem;
-    letter-spacing: -1px;
+.profile-circle {
+    width: 120px;
+    height: 120px;
+    background: rgba(255,255,255,0.1);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    color: #718096;
 }
