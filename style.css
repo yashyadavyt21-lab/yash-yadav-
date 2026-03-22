@@ -1,9 +1,10 @@
-/* 1. Typography & Readability */
+/* 1. Global & Colors */
 :root {
-    --dark-blue: #1a365d;   /* Requirement: #1a365d */
-    --soft-grey: #f4f7f6;    /* Requirement: #f4f7f6 */
+    --dark-blue: #1a365d;
+    --soft-grey: #f4f7f6;
     --white: #ffffff;
-    --text-color: #2d3748;
+    --accent-blue: #ebf8ff;
+    --exp-tint: #e6fffa; /* New tint for Experience */
 }
 
 * {
@@ -13,25 +14,24 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Requirement: 'Inter' Font */
+    font-family: 'Inter', sans-serif;
     background-color: var(--soft-grey);
-    color: var(--text-color);
-    line-height: 1.8; /* Requirement: Improved line-height */
-    letter-spacing: 0.5px; /* Requirement: Improved spacing */
+    color: #2d3748;
+    line-height: 1.8;
 }
 
-/* 2. Navigation Bar: Fixed & Flexbox */
+/* 2. Navigation */
 .navbar {
-    position: fixed; /* Requirement: Fixed bar */
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--dark-blue);
-    padding: 1rem 0;
+    padding: 15px 0;
     z-index: 1000;
 }
 
 .nav-container {
-    display: flex; /* Requirement: Flexbox */
+    display: flex;
     justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
@@ -44,92 +44,107 @@ body {
 }
 
 .nav-links li {
-    display: inline-block; /* Requirement: inline-block */
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .nav-links a {
-    color: var(--white);
+    color: white;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* 3. Header: Flexbox & Positioning */
+/* 3. Header */
 .header-flex {
-    display: flex; /* Requirement: display: flex */
-    justify-content: space-between; /* Requirement: justify-content: space-between */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--dark-blue);
     color: white;
     padding: 140px 10% 80px 10%;
 }
 
-/* 4. Selectors: ID & Classes */
 #main-title {
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 3rem;
 }
 
-.intro-card {
-    text-align: center; /* Requirement: Introduction in the middle */
-    font-size: 1.1rem;
-    border-left: 5px solid var(--dark-blue);
-}
-
+/* 4. Layout & Card Colors */
 .container {
-    max-width: 900px;
-    margin: -40px auto 40px auto; /* Pulls first card slightly over header */
+    max-width: 850px;
+    margin: -30px auto 50px auto;
     padding: 0 20px;
-    position: relative;
 }
 
 .card {
     background: var(--white);
-    padding: 35px;
-    margin-bottom: 30px;
-    border-radius: 15px; /* Requirement: border-radius */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Requirement: box-shadow */
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--dark-blue);
 }
 
-h2 {
-    color: var(--dark-blue); /* Requirement: Professional dark blue */
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+/* Experience Sub-section Tint */
+.section-exp {
+    background-color: var(--exp-tint);
+    border-left: 4px solid #38b2ac; /* Teal accent for experience */
+}
+
+/* Education Sub-section Tint */
+.section-edu {
+    background-color: #f0f4f8;
+    border-left: 4px solid var(--dark-blue);
+}
+
+/* Skills Sub-section Tint */
+.section-skills {
+    background-color: #fffaf0;
+    border-left: 4px solid #d69e2e;
+}
+
+.intro-card {
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: var(--accent-blue);
+}
+
+.section-title {
+    color: var(--dark-blue);
+    margin-bottom: 15px;
     text-transform: uppercase;
+    font-size: 1.2rem;
     letter-spacing: 1px;
 }
 
-.divider {
-    border: 0;
-    border-top: 1px solid #edf2f7;
-    margin: 20px 0;
+.duration {
+    font-size: 0.9rem;
+    color: #4a5568;
+    font-weight: 600;
 }
 
 .skill-tag {
     background: var(--dark-blue);
     color: white;
-    padding: 6px 18px;
-    border-radius: 25px;
-    font-size: 0.85rem;
-    margin: 5px;
+    padding: 6px 15px;
+    border-radius: 20px;
     display: inline-block;
+    margin: 5px;
+    font-size: 0.85rem;
 }
 
 .profile-circle {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: rgba(255,255,255,0.1);
-    border: 3px solid var(--white);
+    border: 2px solid white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2rem;
 }
 
 footer {
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     color: #718096;
 }
