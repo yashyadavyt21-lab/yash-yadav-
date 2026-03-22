@@ -3,36 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Resume | Your Name</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="nav-logo">Resume</div>
-        <ul class="nav-links">
-            <li><a href="#summary">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="nav-logo">PORTFOLIO</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#interests">Interests</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="hero-section">
-        <h1 id="main-title">Your Name</h1>
-        <p>Professional Resume Website</p>
-    </header>
+    <header id="home" class="header-flex">
+        <div class="header-content">
+            <h1 id="main-title">Your Name</h1>
+            <p class="tagline">Creative Professional | Video Specialist</p>
+        </div>
+        </header>
 
     <main class="container">
-        <section id="summary" class="card">
-            <h2>Summary</h2>
-            <p>Write a short sentence about yourself here!</p>
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <div class="entry">
+                <h3>12th Grade</h3>
+                <p>Vidya Prasarak Mandal Jr. College</p>
+            </div>
+            <div class="entry">
+                <h3>10th Grade</h3>
+                <p>Sheth Karamshi Kanji English School</p>
+            </div>
         </section>
 
         <section id="skills" class="card">
             <h2>Skills</h2>
-            <p>HTML, CSS, GitHub, Problem Solving.</p>
+            <div class="skills-list">
+                <span class="skill-tag">Video Editing</span>
+                <span class="skill-tag">Video Shooting</span>
+                <span class="skill-tag">Business Analysis</span>
+            </div>
+        </section>
+
+        <section id="interests" class="card">
+            <h2>Interests</h2>
+            <ul>
+                <li>Learning Business Case Studies</li>
+                <li>Sketching & Visual Arts</li>
+            </ul>
         </section>
     </main>
+
+    <footer>
+        <p>© 2026 | Built with Inter & CSS</p>
+    </footer>
 
 </body>
 </html>
