@@ -1,0 +1,107 @@
+/* 1. Variables & Global Styles (Consistency) */
+:root {
+    --primary-color: #2d3436;   /* Dark Charcoal */
+    --accent-color: #6c5ce7;    /* Modern Purple */
+    --light-bg: #f9f9f9;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Body Font */
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* 2. Positioning: Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky; /* Keeps nav at top while scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 3. Typography & ID Selector */
+#main-title {
+    font-family: 'Poppins', sans-serif; /* Heading Font */
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 4. Layout: Cards and Spacing */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card, .experience-card {
+    background: var(--white);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 5. Flexbox for Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badge {
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #b2bec3;
+}
