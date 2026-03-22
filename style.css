@@ -4,7 +4,8 @@
     --soft-grey: #f4f7f6;
     --white: #ffffff;
     --accent-blue: #ebf8ff;
-    --exp-tint: #e6fffa; /* New tint for Experience */
+    --exp-tint: #e6fffa;
+    --strength-tint: #faf5ff; /* New: Soft purple tint for Strengths */
 }
 
 * {
@@ -67,7 +68,7 @@ body {
     font-size: 3rem;
 }
 
-/* 4. Layout & Card Colors */
+/* 4. Sub-Section Colors */
 .container {
     max-width: 850px;
     margin: -30px auto 50px auto;
@@ -83,19 +84,25 @@ body {
     border-top: 5px solid var(--dark-blue);
 }
 
-/* Experience Sub-section Tint */
-.section-exp {
-    background-color: var(--exp-tint);
-    border-left: 4px solid #38b2ac; /* Teal accent for experience */
+/* Strengths Section Tint */
+.section-strengths {
+    background-color: var(--strength-tint);
+    border-left: 4px solid #805ad5; /* Purple accent */
 }
 
-/* Education Sub-section Tint */
+/* Experience Section Tint */
+.section-exp {
+    background-color: var(--exp-tint);
+    border-left: 4px solid #38b2ac;
+}
+
+/* Education Section Tint */
 .section-edu {
     background-color: #f0f4f8;
     border-left: 4px solid var(--dark-blue);
 }
 
-/* Skills Sub-section Tint */
+/* Skills Section Tint */
 .section-skills {
     background-color: #fffaf0;
     border-left: 4px solid #d69e2e;
@@ -103,7 +110,6 @@ body {
 
 .intro-card {
     text-align: center;
-    font-size: 1.1rem;
     background-color: var(--accent-blue);
 }
 
@@ -115,10 +121,13 @@ body {
     letter-spacing: 1px;
 }
 
-.duration {
-    font-size: 0.9rem;
+.strength-item {
+    margin-bottom: 20px;
+}
+
+.strength-item h3 {
+    font-size: 1rem;
     color: #4a5568;
-    font-weight: 600;
 }
 
 .skill-tag {
@@ -129,6 +138,10 @@ body {
     display: inline-block;
     margin: 5px;
     font-size: 0.85rem;
+}
+
+.strength-tag {
+    background: #6b46c1; /* Specific purple for marketing tags */
 }
 
 .profile-circle {
